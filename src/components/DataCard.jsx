@@ -10,7 +10,15 @@ const DataCard = ({
   return (
     <div className="data-card-container">
       <Link className="text-decoration-none" to={`/${type}/${ID}`}>
-        <img src={PictureUrl1} alt={PictureDescription1} />
+        <div className="data-card-img-wrapper">
+          <div
+            className="data-card-img"
+            style={{
+              backgroundImage: `url(${PictureUrl1})`,
+            }}
+          />
+        </div>
+        {/* <img src={PictureUrl1} alt={PictureDescription1} /> */}
         <div className="data-card-name">{Name}</div>
         <div className="data-card-city">
           <img src="icons/spot16.png" alt="spot-icon" />

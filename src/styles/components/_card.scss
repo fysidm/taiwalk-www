@@ -1,12 +1,26 @@
 .data-card-container {
   width: calc(25% - 15px);
 
-  > a > img {
+  .data-card-img-wrapper {
     width: 100%;
     height: 200px;
     border-radius: 20px;
-    object-fit: cover;
-    display: block;
+    overflow: hidden;
+
+    .data-card-img {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      transition: all 0.5s;
+    }
+
+    &:hover,
+    &:focus {
+      .data-card-img {
+        transform: scale(1.1);
+      }
+    }
   }
 
   .data-card-name {
