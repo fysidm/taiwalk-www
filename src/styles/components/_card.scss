@@ -16,12 +16,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #2f2f2f;
   }
 
   .data-card-city {
     display: flex;
     align-items: center;
     gap: 4px;
+    color: #646464;
 
     img {
       margin-top: 2px;

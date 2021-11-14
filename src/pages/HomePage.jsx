@@ -51,7 +51,9 @@ const HomePage = () => {
       </div>
       <div className="data-card-list-container">
         {topScenicSpots.length &&
-          topScenicSpots.map((props) => <DataCard key={props.ID} {...props} />)}
+          topScenicSpots.map((props) => (
+            <DataCard key={props.ID} type="scenic-spot" {...props} />
+          ))}
       </div>
       <div className="title-more-wrapper">
         <div className="title">一再回訪美食</div>
@@ -64,7 +66,9 @@ const HomePage = () => {
       </div>
       <div className="data-card-list-container">
         {topRestaurants.length &&
-          topRestaurants.map((props) => <DataCard key={props.ID} {...props} />)}
+          topRestaurants.map((props) => (
+            <DataCard key={props.ID} type="restaurant" {...props} />
+          ))}
       </div>
     </div>
   );
