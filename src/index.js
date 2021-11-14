@@ -5,11 +5,14 @@ import { BrowserRouter } from 'react-router-dom';
 import './styles/index.scss';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
+import { Provider as DataContextProvider } from './context/DataContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <DataContextProvider>
+        <App />
+      </DataContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

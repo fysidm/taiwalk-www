@@ -1,0 +1,40 @@
+.home-page-container {
+  padding: 100px 45px 120px;
+
+  .title-more-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .title {
+      font-size: 36px;
+    }
+
+    .more {
+      font-size: 16px;
+      color: #ff725e;
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .activity-card-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 30px;
+    margin-bottom: 36px;
+  }
+
+  .data-card-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
