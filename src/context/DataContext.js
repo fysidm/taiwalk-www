@@ -1,5 +1,6 @@
 import axios from 'axios';
 import jsSHA from 'jssha';
+import dayjs from 'dayjs';
 
 import createDataContext from './createDataContext';
 import { API_URL, APP_ID, APP_KEY } from '../constants';
@@ -33,9 +34,11 @@ const getAuthorizationHeader = () => {
 
 const getTopActivities = (dispatch) => {
   return (callback) => {
+    const now = dayjs().format('YYYY-MM-DD');
+
     axios
       .get(
-        `${API_URL}/Activity?$top=4&$format=JSON&$filter=Picture/PictureUrl1 ne null`,
+        `${API_URL}/Activity?$top=4&$format=JSON&$filter=Picture/PictureUrl1 ne null and date(EndTime) ge ${now} and date(StartTime) le ${now}`,
         {
           headers: getAuthorizationHeader(),
         }
