@@ -12,7 +12,10 @@ const ActivityCard = ({
   return (
     <div className="activity-card-container">
       <div className="activity-card-img-container">
-        <img src={PictureUrl1} alt={PictureDescription1} />
+        <div
+          className="activity-card-img"
+          style={{ backgroundImage: `url(${PictureUrl1})` }}
+        />
       </div>
       <div className="activity-card-text-container">
         <div className="activity-card-date-name-wrapper">
