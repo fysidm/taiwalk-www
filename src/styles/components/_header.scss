@@ -5,6 +5,9 @@
   height: 80px;
   padding: 0 45px;
   border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  width: calc(100% - 90px);
+  background-color: #fff;
 }
 
 .menu-container {
